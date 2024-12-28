@@ -1,8 +1,9 @@
 package com.meli.pushase.api.coupon.infrastructure.controller;
 
+import com.meli.pushase.api.coupon.application.exception.CustomException;
 import com.meli.pushase.api.coupon.domain.CouponRequest;
+import com.meli.pushase.api.coupon.domain.CouponResponse;
 import com.meli.pushase.api.coupon.infrastructure.adapter.CouponServiceImpl;
-import com.meli.pushase.api.coupon.infrastructure.repository.CouponRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +18,12 @@ public class CouponController {
 
     private final CouponServiceImpl couponService;
 
-    @GetMapping()
-    public Mono<Map<String,Double>> getCoupon(@Valid @RequestBody CouponRequest couponRequest) {
+    @PostMapping()
+    public Mono<CouponResponse> getCoupon(@Valid @RequestBody CouponRequest couponRequest) {
         return couponService.getMaxAmountItems(couponRequest.getItem_ids(),couponRequest.getAmount());
+    }
+    @GetMapping("/top5")
+    public Mono<Map<String,Integer>> getTop5Coupon() {
+        return couponService.getTop5Favorites();
     }
 }

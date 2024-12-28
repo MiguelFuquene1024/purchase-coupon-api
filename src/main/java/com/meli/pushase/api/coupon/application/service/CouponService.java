@@ -1,10 +1,13 @@
 package com.meli.pushase.api.coupon.application.service;
 
-import org.springframework.stereotype.Service;
+import com.meli.pushase.api.coupon.application.exception.CustomException;
+import com.meli.pushase.api.coupon.domain.CouponResponse;
 import reactor.core.publisher.Mono;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 public interface CouponService {
-    Mono<Map<String,Double>> getMaxAmountItems(String[] item_ids, double amount);
+    Mono<CouponResponse> getMaxAmountItems(String[] item_ids, double amount) throws CustomException;
+    Mono<Map<String,Integer>> getTop5Favorites();
 }
