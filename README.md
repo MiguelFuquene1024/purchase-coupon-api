@@ -33,7 +33,7 @@ Api de compra de cupones(Nivel 1)
   . mvn compile
 - Luego corra la aplicación,deberá verse como la imagen a continuación:
 
-![]()
+![](https://github.com/MiguelFuquene1024/purchase-coupon-api/blob/master/img/EjecucionV1.png)
 
 
 - Esta Api tendrá una funcionalidades principal:
