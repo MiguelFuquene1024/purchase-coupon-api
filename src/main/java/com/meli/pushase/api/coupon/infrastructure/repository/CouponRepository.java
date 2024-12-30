@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Repository
+
 public class CouponRepository{
 
     private final DynamoDbAsyncClient dynamoDbAsyncClient;
