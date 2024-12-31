@@ -49,13 +49,15 @@ Api de compra de cupones(Nivel 1)
 - Ahora para probar el servicio ingrese a postman , cree una nueva petición de tipo POST, pegue la siguiente url (http://localhost:8080/coupon) y en el body haga un JSON con un arreglo de nombres de productos y el monto del cupón como se ve la siguiente imagen.
 - La respuesta tambien se evidenciara en la imagen:
 
-![]()
+![](https://github.com/MiguelFuquene1024/purchase-coupon-api/blob/master/img/localV1.png)
+
+- Si quiere tambien puede guiarse tambien de la documentacion swagger que sale accediendo a la siguiente url (http://lb-aws-api-1655684714.us-east-1.elb.amazonaws.com/webjars/swagger-ui/index.html)
 
 ## Prueba por el navegador
 
 - Para probar el servicio expuesto en AWS cambie o cree un nuevo request con la siguiente url (http://lb-aws-api-1655684714.us-east-1.elb.amazonaws.com/coupon) y envie en el body nuevamente un json con al misma estructura anterior.
 - Debe responder como se muestra en la imagen.
 
-![]()
+![](https://github.com/MiguelFuquene1024/purchase-coupon-api/blob/master/img/desplegadoV1.png)
 
 
